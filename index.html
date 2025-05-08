@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekemini Udofia - Embedded Systems Engineer</title>
+  <meta name="description" content="Portfolio of Ekemini Udofia, Embedded Systems Engineer">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header id="header" class="transparent">
+    <div class="container">
+      <a href="#" class="logo">
+        <span>&lt;RoboEngineer/&gt;</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn-outline">Resume</button>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon hidden">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+      <div class="container">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <button class="btn btn-outline w-full">Resume</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="bg-circuit-pattern"></div>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <p class="heading-highlight">Hello, my name is</p>
+        <h1>Ekemini Udofia</h1>
+        <h2>I build robots and embedded systems.</h2>
+        <p>
+          I'm an embedded systems engineering intern with a passion for robotics, 
+          electronics design, and creating intelligent systems that interact with the 
+          physical world. Currently focusing on developing skills in microcontroller programming, 
+          electronic circuit design, and control systems.
+        </p>
+        <div class="btn-group">
+          <button class="btn btn-primary">See My Projects</button>
+          <button class="btn btn-outline">Contact Me</button>
+        </div>
+      </div>
+    </div>
+    
+    <a href="#about" class="scroll-indicator">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-heading">About Me</h2>
+      
+      <div class="about-grid">
+        <div class="about-content">
+          <p>
+            Hello! I'm an aspiring embedded systems engineer with a strong interest in robotics. 
+            I'm currently pursuing my Bachelor's degree in Mechatronics Engineering with a focus on 
+            embedded systems and control theory at University of Port-Harcourt, Rivers-State, Nigeria.
+          </p>
+          
+          <p>
+            My journey into embedded systems began when I first programmed an Arduino 
+            to control LED patterns during a college workshop. That simple project 
+            sparked my fascination with the intersection of hardware and software, 
+            leading me to explore more complex projects involving sensors, actuators, 
+            and real-time control systems.
+          </p>
+          
+          <p>
+            During my academic career, I've had the opportunity to work on several robotics 
+            projects, from line-following robots to more advanced systems using computer vision. 
+            These experiences have strengthened my skills in C/C++ programming, PCB design, 
+            and understanding the intricacies of microcontroller-based systems.
+          </p>
+          
+          <p>
+            I'm currently seeking an internship or entry-level position where I can apply my 
+            technical knowledge and continue learning in a professional environment. I'm 
+            particularly interested in roles focused on embedded firmware development, 
+            control systems, or robotics.
+          </p>
+          
+          <div class="education">
+            <h3>Education</h3>
+            <div class="education-card">
+              <h4>Bachelor of Science in Mechatronics Engineering</h4>
+              <p>University of Port-Harcourt, Rivers-State, Nigeria</p>
+              <p class="graduation">Expected Graduation: September 2027</p>
+              <p class="coursework">Relevant Coursework:</p>
+              <ul class="course-list">
+                <li>Microcontroller Programming</li>
+                <li>Digital System Design</li>
+                <li>Control Systems</li>
+                <li>Robotics Fundamentals</li>
+                <li>Embedded Systems Design</li>
+                <li>Circuit Analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="profile-container">
+          <div class="profile-image-wrapper">
+            <img src="profile.png" alt="Ekemini Udofia" class="profile-image">
+            <div class="profile-border"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-heading">Projects</h2>
+      
+      <div class="featured-projects">
+        <!-- Featured Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="placeholder">Line Following Robot Preview</div>
+          </div>
+          
+          <div class="project-info">
+            <p class="featured-tag">Featured Project</p>
+            <h3>Line Following Robot</h3>
+            
+            <div class="project-description">
+              <p>An autonomous robot designed to follow a black line on a white surface. Utilizes infrared sensors for line detection and PID control for smooth tracking.</p>
+            </div>
+            
+            <div class="project-tags">
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">PID Control</span>
+              <span class="tech-tag">IR Sensors</span>
+            </div>
+            
+            <div class="project-links">
+              <button class="btn btn-small" onclick="openProjectModal('line-follower')">View Details</button>
+              <button class="btn btn-small">GitHub</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Featured Project 2 - Add as needed -->
+      </div>
+      
+      <h3 class="sub-heading">Other Noteworthy Projects</h3>
+      <div class="other-projects">
+        <!-- Other Project 1 -->
+        <div class="project-card-small">
+          <h4>Smart Home Monitor</h4>
+          <p>ESP8266-based temperature and humidity monitoring system with mobile app alerts.</p>
+          <div class="project-tags">
+            <span class="tech-tag">ESP8266</span>
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">C++</span>
+          </div>
+        </div>
+        
+        <!-- Other Project 2 -->
+        <div class="project-card-small">
+          <h4>Digital Clock</h4>
+          <p>Custom digital clock with alarm functions and temperature display using ATmega328P.</p>
+          <div class="project-tags">
+            <span class="tech-tag">ATmega328P</span>
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">LCD</span>
+          </div>
+        </div>
+        
+        <!-- Add more small projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-heading">Skills</h2>
+      
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>C/C++</span>
+                <span class="skill-level">4/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Python</span>
+                <span class="skill-level">4/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Assembly</span>
+                <span class="skill-level">3/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>MATLAB</span>
+                <span class="skill-level">3.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>JavaScript</span>
+                <span class="skill-level">3/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Microcontrollers & Hardware -->
+        <div class="skill-category">
+          <h3>Microcontrollers & Hardware</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Arduino</span>
+                <span class="skill-level">5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>STM32</span>
+                <span class="skill-level">3/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>ESP32/ESP8266</span>
+                <span class="skill-level">4.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Raspberry Pi Pico</span>
+                <span class="skill-level">4/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>PIC</span>
+                <span class="skill-level">3.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Electronics -->
+        <div class="skill-category">
+          <h3>Electronics</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Circuit Design</span>
+                <span class="skill-level">4.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>PCB Design</span>
+                <span class="skill-level">4.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Soldering</span>
+                <span class="skill-level">4/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Oscilloscope</span>
+                <span class="skill-level">3.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Logic Analyzer</span>
+                <span class="skill-level">3.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Development Tools & Technologies -->
+        <div class="skill-category">
+          <h3>Development Tools & Technologies</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Git</span>
+                <span class="skill-level">4.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>KiCad</span>
+                <span class="skill-level">3.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>RTOS</span>
+                <span class="skill-level">3/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>CAN Bus</span>
+                <span class="skill-level">3/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>I2C/SPI/UART</span>
+                <span class="skill-level">3.5/5</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="learning-section">
+        <h3>Currently Learning</h3>
+        <div class="learning-tags">
+          <span class="tech-tag">RTOS</span>
+          <span class="tech-tag">ARM Assembly</span>
+          <span class="tech-tag">PCB Design</span>
+          <span class="tech-tag">ROS</span>
+          <span class="tech-tag">Control Theory</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-heading">Contact</h2>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p>
+            I'm currently looking for new opportunities in embedded systems and robotics. 
+            Whether you have a question, job opportunity, or just want to say hi, I'll 
+            do my best to get back to you!
+          </p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              <a href="mailto:ekeminiabasiudofia@gmail.com">ekeminiabasiudofia@gmail.com</a>
+            </div>
+            
+            <div class="contact-method">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/Ekemini-Udofia" target="_blank">github.com/Ekemini-Udofia</a>
+            </div>
+            
+            <div class="contact-method">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://www.linkedin.com/in/ekeminiabasiudofia" target="_blank">linkedin.com/in/ekeminiabasiudofia</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your message here..." rows="5"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="copyright">
+          <p>&copy; <span id="current-year"></span> Ekemini Udofia. All rights reserved.</p>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://github.com/Ekemini-Udofia" target="_blank" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ekeminiabasiudofia" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:ekeminiabasiudofia@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-credits">
+        <p>Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalImage" class="modal-image"></div>
+      <div id="modalTags" class="project-tags"></div>
+      <div id="modalDetails" class="modal-details"></div>
+    </div>
+  </div>
+
+  <!-- Toast notifications -->
+  <div id="toast" class="toast"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
