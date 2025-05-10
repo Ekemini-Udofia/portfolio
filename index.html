@@ -1,555 +1,667 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ekemini Udofia - Embedded Systems Engineer</title>
-  <meta name="description" content="Portfolio of Ekemini Udofia, Embedded Systems Engineer">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <!-- Header/Navbar -->
-  <header id="header" class="transparent">
-    <div class="container">
-      <a href="#" class="logo">
-        <span>&lt;RoboEngineer/&gt;</span>
-      </a>
-      
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <button class="btn btn-outline">Resume</button>
-      </nav>
-      
-      <!-- Mobile Menu Button -->
-      <button class="mobile-menu-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon hidden">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekemini Udofia | Embedded Systems Engineer</title>
+    <meta name="description" content="Ekemini-Abasi Etuk Udofia - Embedded Systems Engineer portfolio showcasing projects in robotics and embedded systems" />
+    <meta name="author" content="Ekemini Udofia" />
+
+    <meta property="og:title" content="Ekemini Udofia | Embedded Systems Engineer" />
+    <meta property="og:description" content="Embedded Systems Engineer portfolio showcasing projects in robotics and embedded systems" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
-    <!-- Mobile Menu -->
-    <div class="mobile-menu hidden">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header" class="fixed-header">
       <div class="container">
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#projects" class="mobile-link">Projects</a>
-        <a href="#skills" class="mobile-link">Skills</a>
-        <a href="#contact" class="mobile-link">Contact</a>
-        <button class="btn btn-outline w-full">Resume</button>
+        <a href="#" class="logo">Ekemini Udofia</a>
+        
+        <nav id="desktop-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <button id="mobile-menu-btn" aria-label="Open mobile menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-    </div>
-  </header>
+      
+      <div id="mobile-nav" class="hidden">
+        <ul>
+          <li><a href="#about" class="mobile-nav-link"><span class="nav-number">01.</span> About</a></li>
+          <li><a href="#skills" class="mobile-nav-link"><span class="nav-number">02.</span> Skills</a></li>
+          <li><a href="#projects" class="mobile-nav-link"><span class="nav-number">03.</span> Projects</a></li>
+          <li><a href="#contact" class="mobile-nav-link"><span class="nav-number">04.</span> Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="bg-circuit-pattern"></div>
-    <div class="glow-effect glow-1"></div>
-    <div class="glow-effect glow-2"></div>
-    
-    <div class="container">
-      <div class="hero-content">
-        <p class="heading-highlight">Hello, my name is</p>
-        <h1>Ekemini Udofia</h1>
-        <h2>I build robots and embedded systems.</h2>
-        <p>
-          I'm an embedded systems engineering intern with a passion for robotics, 
-          electronics design, and creating intelligent systems that interact with the 
-          physical world. Currently focusing on developing skills in microcontroller programming, 
-          electronic circuit design, and control systems.
-        </p>
-        <div class="btn-group">
-          <button class="btn btn-primary">See My Projects</button>
-          <button class="btn btn-outline">Contact Me</button>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Ekemini Udofia</h1>
+          <h2>Embedded Systems Engineer</h2>
+          <p>Building innovative embedded solutions and robotics systems that bridge the gap between hardware and software.</p>
+          <div class="button-group">
+            <a href="#projects" class="button primary">View My Work</a>
+            <a href="#contact" class="button secondary">Contact Me</a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="profile-image">
+            <img src="profile.png" alt="Ekemini Udofia">
+          </div>
         </div>
       </div>
-    </div>
-    
-    <a href="#about" class="scroll-indicator">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-    </a>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-heading">About Me</h2>
       
-      <div class="about-grid">
+      <a href="#about" class="scroll-down">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container about-container">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Circuit Board">
+        </div>
+        
         <div class="about-content">
-          <p>
-            I’m an aspiring embedded systems engineer with a strong interest in robotics. 
-            I’m currently studying Mechatronics Engineering at the University of Port Harcourt, 
-            focusing on embedded systems and robotics engineering..
-          </p>
+          <h2>About Me<span class="section-underline"></span></h2>
           
-          <p>
-            I’ve worked on several robotics projects, from basic home monitors to more advanced 
-            systems that incorporate networking. Through these experiences, I’ve strengthened my 
-            skills in C and C++ programming, PCB design, and microcontroller-based system development. 
-            I also have hands-on experience with platforms like Arduino, ESP32, STM32, and the 
-            Raspberry Pi Pico.
-          </p>
-          
-          <p>
-            My recent work includes building a power monitoring hub using ESP32 and 433MHz receivers, 
-            creating a networked Tic-Tac-Toe game using the Winsock library and SDL3, and exploring 
-            how to build a custom OS with features like USB, display, and WiFi drivers.
-          </p>
-          
-          <p>
-            I’m currently seeking an internship or entry-level opportunity where I can apply what 
-            I’ve built so far and keep learning—especially in areas like embedded firmware development,
-            control systems, or robotics.
-          </p>
-          
-          <div class="education">
-            <h3>Education</h3>
-            <div class="education-card">
-              <h4>Bachelor of Engineering in Mechatronics Engineering</h4>
-              <p>University of Port-Harcourt, Rivers-State, Nigeria</p>
-              <p class="graduation">Expected Graduation: September 2027</p>
-              <p class="coursework">Relevant Coursework:</p>
-              <ul class="course-list">
-                <li>Microcontroller Programming</li>
-                <li>Digital System Design</li>
-                <li>Control Systems</li>
-                <li>Robotics Fundamentals</li>
-                <li>Embedded Systems Design</li>
-                <li>Circuit Analysis</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="profile-container">
-          <div class="profile-image-wrapper">
-            <img src="profile.png" alt="Ekemini Udofia" class="profile-image">
-            <div class="profile-border"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="section-heading">Projects</h2>
-      
-      <div class="featured-projects">
-        <!-- Featured Project 1 -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="placeholder">Line Following Robot Preview</div>
+          <div class="about-text">
+            <p>
+              I'm an aspiring embedded systems engineer with a strong interest in robotics. I'm currently studying Mechatronics Engineering at the University of Port Harcourt, focusing on embedded systems and control theory.
+            </p>
+            <p>
+              I've worked on several robotics projects, from basic line-following robots to more advanced systems that incorporate computer vision. Through these experiences, I've strengthened my skills in C and C++ programming, PCB design, and microcontroller-based system development. I also have hands-on experience with platforms like Arduino, ESP32, STM32, and the Raspberry Pi Pico.
+            </p>
+            <p>
+              My recent work includes building a home automation data server using ESP32 and 433MHz receivers, creating a networked Tic-Tac-Toe game using the Winsock library and SDL3, and exploring how to build a custom OS with features like USB, display, and WiFi drivers.
+            </p>
           </div>
           
-          <div class="project-info">
-            <p class="featured-tag">Featured Project</p>
-            <h3>Power Monitoring Hub</h3>
-            
-            <div class="project-description">
-              <p>An autonomous robot designed to follow a black line on a white surface. Utilizes infrared sensors for line detection and PID control for smooth tracking.</p>
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v10" />
+                </svg>
+              </div>
+              <div>
+                <h3>EDUCATION</h3>
+                <p>Mechatronics Engineering</p>
+                <p>University of Port-Harcourt</p>
+              </div>
             </div>
             
-            <div class="project-tags">
-              <span class="tech-tag">Arduino</span>
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">PID Control</span>
-              <span class="tech-tag">IR Sensors</span>
-            </div>
-            
-            <div class="project-links">
-              <button class="btn btn-small" onclick="openProjectModal('line-follower')">View Details</button>
-              <button class="btn btn-small">GitHub</button>
+            <div class="info-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3>GRADUATION</h3>
+                <p>Expected: September 2027</p>
+              </div>
             </div>
           </div>
         </div>
-        
-        <!-- Featured Project 2 - Add as needed -->
       </div>
-      
-      <h3 class="sub-heading">Other Noteworthy Projects</h3>
-      <div class="other-projects">
-        <!-- Other Project 1 -->
-        <div class="project-card-small">
-          <h4>Smart Home Monitor</h4>
-          <p>ESP8266-based temperature and humidity monitoring system with mobile app alerts.</p>
-          <div class="project-tags">
-            <span class="tech-tag">ESP8266</span>
-            <span class="tech-tag">IoT</span>
-            <span class="tech-tag">C++</span>
-          </div>
-        </div>
-        
-        <!-- Other Project 2 -->
-        <div class="project-card-small">
-          <h4>Digital Clock</h4>
-          <p>Custom digital clock with alarm functions and temperature display using ATmega328P.</p>
-          <div class="project-tags">
-            <span class="tech-tag">ATmega328P</span>
-            <span class="tech-tag">C</span>
-            <span class="tech-tag">LCD</span>
-          </div>
-        </div>
-        
-        <!-- Add more small projects as needed -->
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2 class="section-heading">Skills</h2>
-      
-      <div class="skills-grid">
-        <!-- Programming Languages -->
-        <div class="skill-category">
-          <h3>Programming Languages</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>C/C++</span>
-                <span class="skill-level">4/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 80%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Python</span>
-                <span class="skill-level">4/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 80%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Assembly</span>
-                <span class="skill-level">3/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 60%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>MATLAB</span>
-                <span class="skill-level">3.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 70%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>JavaScript</span>
-                <span class="skill-level">3/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 60%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Microcontrollers & Hardware -->
-        <div class="skill-category">
-          <h3>Microcontrollers & Hardware</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Arduino</span>
-                <span class="skill-level">5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 100%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>STM32</span>
-                <span class="skill-level">3/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 60%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>ESP32/ESP8266</span>
-                <span class="skill-level">4.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 90%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Raspberry Pi Pico</span>
-                <span class="skill-level">4/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 80%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>PIC</span>
-                <span class="skill-level">3.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 70%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Electronics -->
-        <div class="skill-category">
-          <h3>Electronics</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Circuit Design</span>
-                <span class="skill-level">4.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 90%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>PCB Design</span>
-                <span class="skill-level">4.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 90%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Soldering</span>
-                <span class="skill-level">4/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 80%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Oscilloscope</span>
-                <span class="skill-level">3.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 70%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Logic Analyzer</span>
-                <span class="skill-level">3.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 70%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Development Tools & Technologies -->
-        <div class="skill-category">
-          <h3>Development Tools & Technologies</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>Git</span>
-                <span class="skill-level">4.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 90%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>KiCad</span>
-                <span class="skill-level">3.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 70%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>RTOS</span>
-                <span class="skill-level">3/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 60%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>CAN Bus</span>
-                <span class="skill-level">3/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 60%"></div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>I2C/SPI/UART</span>
-                <span class="skill-level">3.5/5</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress" style="width: 70%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="learning-section">
-        <h3>Currently Learning</h3>
-        <div class="learning-tags">
-          <span class="tech-tag">RTOS</span>
-          <span class="tech-tag">ARM Assembly</span>
-          <span class="tech-tag">PCB Design</span>
-          <span class="tech-tag">ROS</span>
-          <span class="tech-tag">Control Theory</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Technical Skills<span class="section-underline"></span></h2>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-heading">Contact</h2>
-      
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Get In Touch</h3>
-          <p>
-            I'm currently looking for new opportunities in embedded systems and robotics. 
-            Whether you have a question, job opportunity, or just want to say hi, I'll 
-            do my best to get back to you!
-          </p>
+        <div class="skills-grid">
+          <!-- Programming Languages Card -->
+          <div class="skill-card">
+            <div class="card-header">
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="card-content">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">C/C++</span>
+                  <span class="skill-level">4/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-level">4/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Assembly</span>
+                  <span class="skill-level">2.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
           
-          <div class="contact-methods">
-            <div class="contact-method">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-              <a href="mailto:ekeminiabasiudofia@gmail.com">ekeminiabasiudofia@gmail.com</a>
+          <!-- Microcontrollers & Hardware -->
+          <div class="skill-card">
+            <div class="card-header">
+              <h3>Microcontrollers & Hardware</h3>
             </div>
-            
-            <div class="contact-method">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              <a href="https://github.com/Ekemini-Udofia" target="_blank">github.com/Ekemini-Udofia</a>
+            <div class="card-content">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Arduino</span>
+                  <span class="skill-level">5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 100%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">STM32</span>
+                  <span class="skill-level">3/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">ESP32</span>
+                  <span class="skill-level">4.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Raspberry Pi Pico</span>
+                  <span class="skill-level">4/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
             </div>
-            
-            <div class="contact-method">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              <a href="https://www.linkedin.com/in/ekeminiabasiudofia" target="_blank">linkedin.com/in/ekeminiabasiudofia</a>
+          </div>
+          
+          <!-- Electronics -->
+          <div class="skill-card">
+            <div class="card-header">
+              <h3>Electronics</h3>
+            </div>
+            <div class="card-content">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Circuit Design</span>
+                  <span class="skill-level">4.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">PCB Design</span>
+                  <span class="skill-level">4.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Soldering</span>
+                  <span class="skill-level">4/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Development Tools & Technologies -->
+          <div class="skill-card">
+            <div class="card-header">
+              <h3>Development Tools & Technologies</h3>
+            </div>
+            <div class="card-content">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Git</span>
+                  <span class="skill-level">4.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">KiCad</span>
+                  <span class="skill-level">3.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">RTOS</span>
+                  <span class="skill-level">3/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">I2C/SPI/UART</span>
+                  <span class="skill-level">3.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Solidworks</span>
+                  <span class="skill-level">3.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Altium Designer</span>
+                  <span class="skill-level">3.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Robotics -->
+          <div class="skill-card">
+            <div class="card-header">
+              <h3>Robotics</h3>
+            </div>
+            <div class="card-content">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Motor Control</span>
+                  <span class="skill-level">4/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Sensors Integration</span>
+                  <span class="skill-level">4/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">PID Control</span>
+                  <span class="skill-level">3.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Robot Kinematics</span>
+                  <span class="skill-level">3.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">ROS</span>
+                  <span class="skill-level">3.5/5</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="learning-section">
+          <h3>Currently Learning</h3>
+          <div class="learning-tags">
+            <span class="learning-tag">Solidworks</span>
+            <span class="learning-tag">ROS</span>
+            <span class="learning-tag">Advanced PCB Design</span>
+            <span class="learning-tag">Embedded Linux</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects<span class="section-underline"></span></h2>
+
+        <div class="projects-grid">
+          <!-- Power Monitoring Hub Project -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="power_hub.jpg" alt="Power Monitoring Hub">
+            </div>
+            <div class="project-content">
+              <h3>Power Monitoring Hub</h3>
+              <p>A smart device that logs power outages and monitors electricity availability in homes. Primarily designed for Nigerians due to the inconsistent power supply situation in the country, it notifies users when power is restored via SMS or mobile notifications. Built with ESP32 and integrates with a mobile app for remote monitoring.</p>
+              
+              <div class="project-tags">
+                <span class="project-tag">ESP32</span>
+                <span class="project-tag">IoT</span>
+                <span class="project-tag">Power Monitoring</span>
+                <span class="project-tag">Mobile App</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/Ekemini-Udofia/Power-Monitoring-Hub" class="button outline" target="_blank" rel="noopener noreferrer">
+                  <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Smart Home Monitor Project -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smart Home Monitor">
+            </div>
+            <div class="project-content">
+              <h3>Smart Home Monitor</h3>
+              <p>An ESP32-based home automation system that monitors temperature, humidity, and motion. Integrated with 433MHz receivers to communicate with wireless sensors throughout the home. Data is visualized through a web dashboard that allows remote monitoring and control of connected devices.</p>
+              
+              <div class="project-tags">
+                <span class="project-tag">ESP32</span>
+                <span class="project-tag">Home Automation</span>
+                <span class="project-tag">IoT</span>
+                <span class="project-tag">Sensors</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="#" class="button outline">
+                  <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Home Security System Project -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Security System">
+            </div>
+            <div class="project-content">
+              <h3>Home Security System</h3>
+              <p>An Arduino-based security system featuring motion detection, door/window sensors, and a simple alarm. Includes a keypad for arming/disarming and sends notifications via SMS using a GSM module. The system operates on backup power during outages and includes tamper detection features.</p>
+              
+              <div class="project-tags">
+                <span class="project-tag">Arduino</span>
+                <span class="project-tag">Security</span>
+                <span class="project-tag">Sensors</span>
+                <span class="project-tag">GSM</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="#" class="button outline">
+                  <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch<span class="section-underline"></span></h2>
         
-        <div class="contact-form">
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="John Smith">
+        <div class="contact-container">
+          <div class="contact-form-container">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your.email@example.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Tell me about your project or opportunity..." rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="button primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+          
+          <div class="contact-info-container">
+            <div class="contact-info-card">
+              <h3>Contact Information</h3>
+              <div class="contact-info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <p class="info-label">Email</p>
+                  <a href="mailto:ekeminiabasiudofia@gmail.com">ekeminiabasiudofia@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div>
+                  <p class="info-label">Location</p>
+                  <p>Port Harcourt, Rivers State, Nigeria</p>
+                </div>
+              </div>
             </div>
             
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com">
+            <div class="contact-info-card">
+              <h3>Connect With Me</h3>
+              <div class="social-grid">
+                <a href="https://github.com/Ekemini-Udofia" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/ekeminiabasiudofia" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+                
+                <a href="https://instagram.com/ekeminiabasiudofia" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+                
+                <a href="https://youtube.com/ekeminieudofia" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+                
+                <a href="https://x.com/ekeminieudofia" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835-8.14-10.665h6.793l4.72 6.3 7.46-6.3zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"></path>
+                  </svg>
+                  <span>X</span>
+                </a>
+                
+                <a href="https://linktr.ee/ekeminieudofia" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.953 15.066c-.08.163-.08.324-.08.486 0 .648.486 1.134 1.134 1.134.324 0 .648-.081.81-.324l5.097-7.94c.081-.082.081-.163.081-.325 0-.567-.405-1.053-1.053-1.053-.243 0-.567.081-.729.324l-5.26 7.698zm9.14-5.915c0 .405.162.81.486 1.053l3 2.105c.324.243.567.324.891.324.729 0 1.215-.567 1.215-1.215 0-.324-.081-.648-.324-.891l-1.701-1.376 1.701-1.376c.243-.243.324-.567.324-.891 0-.648-.486-1.215-1.215-1.215-.324 0-.567.081-.891.324l-3 2.105c-.324.243-.486.648-.486 1.053zm-13.716 0c0 .405.162.81.486 1.053l3 2.105c.324.243.648.324.891.324.729 0 1.215-.567 1.215-1.215 0-.324-.081-.648-.324-.891L7.144 9.15l1.701-1.376c.243-.243.324-.567.324-.891 0-.648-.486-1.215-1.215-1.215-.243 0-.567.081-.891.324l-3 2.105c-.324.243-.486.648-.486 1.053zm6.066 5.561L17.19 4.92c.486-.81.243-1.863-.729-2.267-.325-.081-.649-.163-.973-.82.567-.243.972-.81.972-1.457 0-.89-.729-1.619-1.619-1.619-.89 0-1.619.729-1.619 1.619 0 .648.405 1.214.972 1.457-.324-.081-.648 0-.972.082-.972.405-1.215 1.457-.729 2.267l7.698 9.711c.162.243.162.567 0 .81-.162.243-.486.405-.81.405-.324 0-.648-.162-.81-.405l-7.698-9.711c-.24-.323-.646-.485-1.052-.485h-.082c-.405 0-.81.162-1.053.486-.486.81-.243 1.862.729 2.267l7.698 9.71c.567.81 1.538 1.296 2.591 1.296 1.053 0 2.024-.486 2.591-1.296.567-.81.567-1.862 0-2.672l-7.698-9.71z" fill-rule="evenodd"></path>
+                  </svg>
+                  <span>Linktree</span>
+                </a>
+              </div>
             </div>
-            
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Your message here..." rows="5"></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="copyright">
-          <p>&copy; <span id="current-year"></span> Ekemini Udofia. All rights reserved.</p>
+    <!-- Toast Message -->
+    <div id="toast" class="toast hidden">
+      <div class="toast-content">
+        <span class="toast-title"></span>
+        <span class="toast-message"></span>
+      </div>
+      <button class="toast-close">×</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <h2>Ekemini Udofia</h2>
+            <p>Embedded Systems Engineer</p>
+          </div>
+          
+          <div>
+            <a href="#contact" class="button secondary">Contact Me</a>
+          </div>
         </div>
         
-        <div class="social-links">
-          <a href="https://github.com/Ekemini-Udofia" target="_blank" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/ekeminiabasiudofia" target="_blank" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="mailto:ekeminiabasiudofia@gmail.com" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-          </a>
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> Ekemini Udofia. All rights reserved.</p>
+          
+          <div class="footer-social">
+            <a href="https://github.com/Ekemini-Udofia" target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+              </svg>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/ekeminiabasiudofia" target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            
+            <a href="https://instagram.com/ekeminiabasiudofia" target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+            
+            <a href="https://youtube.com/ekeminieudofia" target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      
-      <div class="footer-credits">
-        <p>Built with HTML, CSS, and JavaScript</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Project Modal -->
-  <div id="projectModal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <div id="modalImage" class="modal-image"></div>
-      <div id="modalTags" class="project-tags"></div>
-      <div id="modalDetails" class="modal-details"></div>
-    </div>
-  </div>
-
-  <!-- Toast notifications -->
-  <div id="toast" class="toast"></div>
-  
-  <script src="script.js"></script>
-</body>
+    </footer>
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

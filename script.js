@@ -1,182 +1,166 @@
+// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+  // Set current year in footer
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  
+  // Mobile menu functionality
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  
+  mobileMenuBtn.addEventListener('click', function() {
+    // Toggle mobile menu
+    mobileNav.classList.toggle('hidden');
+    mobileNav.classList.toggle('show');
     
-    // Mobile menu toggle
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const menuIcon = document.querySelector('.menu-icon');
-    const closeIcon = document.querySelector('.close-icon');
-    
-    menuBtn.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-      menuIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
+    // Change icon based on menu state
+    if (mobileNav.classList.contains('show')) {
+      mobileMenuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>`;
+    } else {
+      mobileMenuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>`;
+    }
+  });
+  
+  // Close mobile menu when clicking on mobile nav links
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      mobileNav.classList.remove('show');
+      mobileNav.classList.add('hidden');
+      mobileMenuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>`;
     });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-      });
-    });
-    
-    // Header scroll effect
+  });
+  
+  // Scroll event for header
+  window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-        header.classList.remove('transparent');
-      } else {
-        header.classList.remove('scrolled');
-        header.classList.add('transparent');
+    if (window.scrollY > 10) {
+      header.classList.add('fixed-header');
+    } else {
+      header.classList.remove('fixed-header');
+    }
+  });
+  
+  // Toast message functionality
+  const toast = document.getElementById('toast');
+  const toastTitle = document.querySelector('.toast-title');
+  const toastMessage = document.querySelector('.toast-message');
+  const toastClose = document.querySelector('.toast-close');
+  
+  function showToast(title, message, duration = 5000) {
+    toastTitle.textContent = title;
+    toastMessage.textContent = message;
+    toast.classList.remove('hidden');
+    toast.classList.add('show');
+    
+    // Auto hide after duration
+    if (duration > 0) {
+      setTimeout(() => {
+        hideToast();
+      }, duration);
+    }
+  }
+  
+  function hideToast() {
+    toast.classList.remove('show');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 300);
+  }
+  
+  // Close toast when clicking on close button
+  toastClose.addEventListener('click', hideToast);
+  
+  // Contact form submission
+  const contactForm = document.getElementById('contactForm');
+  
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:ekeminiabasiudofia@gmail.com?subject=Portfolio Contact: ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    
+    // Open the mailto link
+    window.location.href = mailtoLink;
+    
+    // Show success toast
+    showToast('Email client opened!', 'Your message has been prepared in your email client.');
+    
+    // Reset form
+    contactForm.reset();
+  });
+  
+  // Add smooth scroll behavior for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Get header height to offset the scroll position
+        const headerHeight = document.getElementById('header').offsetHeight;
+        
+        window.scrollTo({
+          top: targetElement.offsetTop - headerHeight,
+          behavior: 'smooth'
+        });
       }
     });
+  });
+  
+  // Add animation classes to elements when they come into view
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.skill-card, .project-card, .info-card');
     
-    // Initialize scroll animations for skill bars
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const progressBars = entry.target.querySelectorAll('.progress');
-          progressBars.forEach(bar => {
-            const width = bar.style.width;
-            bar.style.width = '0';
-            setTimeout(() => {
-              bar.style.width = width;
-            }, 100);
-          });
+          let delay = 0;
+          
+          // If this is a card in a grid, calculate a staggered delay
+          const parent = entry.target.parentElement;
+          if (parent && (parent.classList.contains('skills-grid') || parent.classList.contains('projects-grid'))) {
+            const index = Array.from(parent.children).indexOf(entry.target);
+            delay = index * 100; // 100ms delay between each card
+          }
+          
+          // Apply animation with delay
+          entry.target.style.opacity = '0';
+          entry.target.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            entry.target.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, delay);
+          
+          // Stop observing after animation
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    
-    document.querySelectorAll('.skill-category').forEach(category => {
-      observer.observe(category);
+    }, {
+      threshold: 0.1
     });
     
-    // Project modal functionality
-    const modal = document.getElementById('projectModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalImage = document.getElementById('modalImage');
-    const modalTags = document.getElementById('modalTags');
-    const modalDetails = document.getElementById('modalDetails');
-    const closeModal = document.querySelector('.modal-close');
-    
-    window.openProjectModal = function(projectId) {
-      // Sample project data - in a real site, this would come from a database or JSON file
-      const projects = {
-        'line-follower': {
-          title: 'Line Following Robot',
-          tags: ['Arduino', 'C++', 'PID Control', 'IR Sensors'],
-          details: `An autonomous robot designed to follow a black line on a white surface using infrared sensors.
+    elements.forEach(element => {
+      element.style.opacity = '0';
+      observer.observe(element);
+    });
+  }
   
-  Features:
-  - Uses an array of 5 IR sensors for precise line detection
-  - Implements PID control algorithm for smooth tracking and minimal oscillation
-  - Designed custom PCB for sensor array and motor control
-  - 3D printed chassis for optimal sensor placement
-  - Capable of handling curves and intersections
-  
-  Technical challenges included calibrating the sensors for different lighting conditions and tuning the PID constants for optimal performance across various track designs.`
-        }
-        // Add more projects as needed
-      };
-      
-      const project = projects[projectId];
-      if (project) {
-        modalTitle.textContent = project.title;
-        modalImage.innerHTML = `<div class="placeholder">${project.title} Preview</div>`;
-        
-        // Clear and populate tags
-        modalTags.innerHTML = '';
-        project.tags.forEach(tag => {
-          const tagSpan = document.createElement('span');
-          tagSpan.className = 'tech-tag';
-          tagSpan.textContent = tag;
-          modalTags.appendChild(tagSpan);
-        });
-        
-        modalDetails.textContent = project.details;
-        
-        // Show modal
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-      }
-    };
-    
-    // Close modal when clicking the X
-    closeModal.addEventListener('click', function() {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto'; // Re-enable scrolling
-    });
-    
-    // Close modal when clicking outside the modal content
-    window.addEventListener('click', function(event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-    });
-    
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Validate form (simple validation)
-        if (!name || !email || !message) {
-          showToast('Please fill out all fields', 'error');
-          return;
-        }
-        
-        // This would normally send to a server
-        console.log('Form submission:', { name, email, message });
-        
-        // For demo purposes, just show a success message
-        showToast('Message sent successfully!');
-        
-        // Reset the form
-        contactForm.reset();
-      });
-    }
-    
-    // Toast notification function
-    function showToast(message, type = 'success') {
-      const toast = document.getElementById('toast');
-      toast.textContent = message;
-      toast.className = 'toast';
-      
-      if (type === 'error') {
-        toast.classList.add('error');
-      }
-      
-      toast.classList.add('show');
-      
-      setTimeout(function() {
-        toast.classList.remove('show');
-      }, 3000);
-    }
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80, // Offset for header height
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  });
+  // Initialize animations
+  animateOnScroll();
+});
